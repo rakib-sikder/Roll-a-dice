@@ -84,6 +84,7 @@ document.querySelector('.btn--new').addEventListener('click', function () {
   player1Score.textContent = 0;
   player2Score.textContent = 0;
   playerScore = [0, 0];
+  currentScore = 0;
   games = true;
   player = 0;
 });
