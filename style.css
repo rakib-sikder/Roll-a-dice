@@ -167,3 +167,54 @@ main {
   font-weight: 700;
   color: #c7365f;
 }
+@media only screen and (max-width: 576px) {
+  .player {
+    flex: 50%;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.75s;
+  }
+  .score {
+    font-size: 5rem;
+    font-weight: 300;
+    color: #c7365f;
+    margin-bottom: 90px;
+  }
+  .name {
+    position: relative;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+  .btn--new {
+    top: 53rem;
+  }
+  .btn--roll {
+    top: 38.3rem;
+  }
+  .current {
+    background-color: #c7365f;
+    opacity: 0.8;
+    border-radius: 9px;
+    color: #fff;
+    width: 70%;
+    /* padding: 0rem 1rem; */
+    text-align: center;
+    transition: all 0.75s;
+  }
+  body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    height: auto;
+    color: #333;
+    background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
