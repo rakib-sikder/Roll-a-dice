@@ -24,8 +24,8 @@ const btnroll = document.querySelector('.btn--roll');
 const btnhold = document.querySelector('.btn--hold');
 const player1 = document.querySelector('.player--0');
 const player2 = document.querySelector('.player--1');
-const player1Score = document.querySelector('.score--0');
-const player2Score = document.querySelector('.score--1');
+const player1Score = document.querySelector('#score--0');
+const player2Score = document.querySelector('#score--1');
 const player1Current = document.getElementById('current--0');
 const player2Current = document.getElementById('current--1');
 
@@ -61,7 +61,7 @@ btnhold.addEventListener('click', function () {
     //   playerScore[player]= playerScore[player]+currentScore
     document.getElementById(`score--${player}`).textContent =
       playerScore[player];
-    if (playerScore[player] >= 100) {
+    if (playerScore[player] >= 10) {
       games = false;
       document.querySelector('.dice').classList.add('hidden');
       document
@@ -75,7 +75,15 @@ btnhold.addEventListener('click', function () {
   }
 });
 document.querySelector('.btn--new').addEventListener('click', function () {
+  player1.classList.remove('player--winner');
+  player2.classList.remove('player--winner');
+  player2.classList.remove('player--active');
+  player1.classList.add('player--active');
+  player1Current.textContent = 0;
+  player2Current.textContent = 0;
+  player1Score.textContent = 0;
+  player2Score.textContent = 0;
   playerScore = [0, 0];
-  player1Score.textContent = playerScore[0];
-  player2Score.textContent = playerScore[0];
+  games = true;
+  player = 0;
 });
