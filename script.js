@@ -61,7 +61,7 @@ btnhold.addEventListener('click', function () {
     //   playerScore[player]= playerScore[player]+currentScore
     document.getElementById(`score--${player}`).textContent =
       playerScore[player];
-    if (playerScore[player] >= 10) {
+    if (playerScore[player] >= 100) {
       games = false;
       document.querySelector('.dice').classList.add('hidden');
       document

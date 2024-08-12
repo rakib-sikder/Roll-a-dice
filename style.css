@@ -170,7 +170,7 @@ main {
 @media only screen and (max-width: 576px) {
   .player {
     flex: 50%;
-    padding: 3rem 1rem;
+    padding: 10rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -192,25 +192,29 @@ main {
     margin-bottom: 1rem;
   }
   .btn--new {
-    top: 53rem;
+    top: 2rem;
   }
   .btn--roll {
-    top: 38.3rem;
+    top: 55.3rem;
+  }
+  .btn--hold {
+    top: 66.1rem;
   }
   .current {
+    margin-top: 110px;
     background-color: #c7365f;
     opacity: 0.8;
     border-radius: 9px;
     color: #fff;
     width: 70%;
-    /* padding: 0rem 1rem; */
+    padding: 1rem 1rem;
     text-align: center;
     transition: all 0.75s;
   }
   body {
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
-    height: auto;
+    height: 100vh;
     color: #333;
     background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
     display: flex;
@@ -220,9 +224,21 @@ main {
   .dice {
     position: absolute;
     left: 50%;
-    top: 9.5rem;
+    top: 24.5rem;
     transform: translateX(-50%);
     height: 10rem;
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  }
+  main {
+    position: relative;
+    width: 100rem;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(200px);
+    filter: blur();
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    overflow: hidden;
+    display: flex;
   }
 }
